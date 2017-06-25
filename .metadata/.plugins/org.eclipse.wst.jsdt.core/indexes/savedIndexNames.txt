@@ -1,0 +1,2 @@
+INDEX VERSION 1.3+/home/tharcisio/Documentos/Git/Fature/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1333539412.index

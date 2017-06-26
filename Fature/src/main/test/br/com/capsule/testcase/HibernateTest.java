@@ -32,9 +32,9 @@ public class HibernateTest{
 			paciente.setEndereco(null);
 			paciente.setFone(null);
 			paciente.setId(1);
-			paciente.setNome("Tharcisio C V Fernandes");
-			paciente.setMae("Josiniana C V Fernandes");
-			paciente.setPai("Raul F de O Junior");
+			paciente.setNome("teste");
+			paciente.setMae("teste");
+			paciente.setPai("teste");
 			paciente.setSexo("Masculino");
 			
 			session.save(paciente);

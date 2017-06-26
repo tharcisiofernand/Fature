@@ -1,7 +1,28 @@
 package br.com.capsule.model;
 
-public class Cid {
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Cid implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	public Cid(String descricao, String codigo) {
+		super();
+		this.descricao = descricao;
+		this.codigo = codigo;
+	}
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String descricao;
 	private String codigo;

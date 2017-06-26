@@ -1,12 +1,37 @@
 package br.com.capsule.model;
 
-public class Estabelecimento {
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Estabelecimento implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	
+	public Estabelecimento(String nome, Endereco endereco, Telefone fone, int cnpj, int cnes) {
+		super();
+		this.nome = nome;
+		this.endereco = endereco;
+		this.fone = fone;
+		this.cnpj = cnpj;
+		this.cnes = cnes;
+	}
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String nome;
 	private Endereco endereco;
 	private Telefone fone;
-	private String cnpj;
+	private int cnpj;
 	private int cnes;
 	
 	public int getId() {
@@ -33,10 +58,10 @@ public class Estabelecimento {
 	public void setFone(Telefone fone) {
 		this.fone = fone;
 	}
-	public String getCnpj() {
+	public int getCnpj() {
 		return cnpj;
 	}
-	public void setCnpj(String cnpj) {
+	public void setCnpj(int cnpj) {
 		this.cnpj = cnpj;
 	}
 	public int getCnes() {

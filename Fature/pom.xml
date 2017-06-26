@@ -7,16 +7,22 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>Fature Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
   <properties>
 		<spring.version>3.0.5.RELEASE</spring.version>
+		<hibernate.version>4.2.15.Final</hibernate.version>
+  
   </properties>
+  
   <dependencies>
+  
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    
     <!-- Spring 3 dependencies -->
 	<dependency>
 		<groupId>org.springframework</groupId>
@@ -35,8 +41,25 @@
 		<artifactId>spring-webmvc</artifactId>
 		<version>${spring.version}</version>
 	</dependency>
+	
+	<!-- Hibernate 4 dependencies -->
+	<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+	</dependency>
+	
+	<!-- Postgres dependencies -->
+	<dependency>
+		<groupId>org.postgresql</groupId>
+		<artifactId>postgresql</artifactId>
+		<version>9.3-1102-jdbc41</version>
+	</dependency>
+	
   </dependencies>
+  
   <build>
     <finalName>Fature</finalName>
   </build>
+  
 </project>

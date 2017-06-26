@@ -1,13 +1,28 @@
 package br.com.capsule.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Pessoa {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
+public class Pessoa implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String nome;
 	private String sexo;
-	private String cpf;
+	private int cpf;
 	private String pai;
 	private String mae;
 	private Date dtaNascimento;
@@ -32,10 +47,10 @@ public class Pessoa {
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-	public String getCpf() {
+	public int getCpf() {
 		return cpf;
 	}
-	public void setCpf(String cpf) {
+	public void setCpf(int cpf) {
 		this.cpf = cpf;
 	}
 	public String getPai() {

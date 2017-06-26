@@ -1,10 +1,32 @@
 package br.com.capsule.model;
 
-public class Telefone {
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Telefone implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	
+	public Telefone(int ddd, int numero) {
+		super();
+		this.ddd = ddd;
+		this.numero = numero;
+	}
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private Integer ddd;
-	private Integer numero;
+	private int ddd;
+	private int numero;
 	
 	public int getId() {
 		return id;
@@ -12,16 +34,16 @@ public class Telefone {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public Integer getDdd() {
+	public int getDdd() {
 		return ddd;
 	}
-	public void setDdd(Integer ddd) {
+	public void setDdd(int ddd) {
 		this.ddd = ddd;
 	}
-	public Integer getNumero() {
+	public int getNumero() {
 		return numero;
 	}
-	public void setNumero(Integer numero) {
+	public void setNumero(int numero) {
 		this.numero = numero;
 	}
 	

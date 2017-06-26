@@ -1,10 +1,34 @@
 package br.com.capsule.model;
 
-public class Tabela {
+import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Tabela implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	
+	public Tabela(String nome, int codigo, Procedimentos procedimento, Double valor) {
+		super();
+		this.nome = nome;
+		this.codigo = codigo;
+		this.procedimento = procedimento;
+		this.valor = valor;
+	}
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String nome;
-	private Integer codigo;
+	private int codigo;
 	private Procedimentos procedimento;
 	private Double valor;
 	
@@ -20,10 +44,10 @@ public class Tabela {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Integer getCodigo() {
+	public int getCodigo() {
 		return codigo;
 	}
-	public void setCodigo(Integer codigo) {
+	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
 	public Procedimentos getProcedimento() {

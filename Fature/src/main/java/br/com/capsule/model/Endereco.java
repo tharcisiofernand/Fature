@@ -1,7 +1,34 @@
 package br.com.capsule.model;
 
-public class Endereco {
+import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Endereco implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	
+	public Endereco(String rua, String quadra, String lote, String bairro, String cep, String cidade, String estado) {
+		super();
+		this.rua = rua;
+		this.quadra = quadra;
+		this.lote = lote;
+		this.bairro = bairro;
+		this.cep = cep;
+		this.cidade = cidade;
+		this.estado = estado;
+	}
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String rua;
 	private String quadra;

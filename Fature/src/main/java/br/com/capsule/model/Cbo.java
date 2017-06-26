@@ -1,10 +1,31 @@
 package br.com.capsule.model;
 
-public class Cbo {
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Cbo implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public Cbo(String nome, int codigo) {
+		super();
+		this.nome = nome;
+		this.codigo = codigo;
+	}
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String nome;
-	private Integer codigo;
+	private int codigo;
 	
 	public int getId() {
 		return id;
@@ -18,10 +39,10 @@ public class Cbo {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Integer getCodigo() {
+	public int getCodigo() {
 		return codigo;
 	}
-	public void setCodigo(Integer codigo) {
+	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
 	

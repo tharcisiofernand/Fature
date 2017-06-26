@@ -2,7 +2,7 @@ package br.com.capsule.model;
 
 public class Endereco {
 
-	private Integer id;
+	private int id;
 	private String rua;
 	private String quadra;
 	private String lote;
@@ -11,10 +11,10 @@ public class Endereco {
 	private String cidade;
 	private String estado;
 	
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getRua() {
@@ -60,5 +60,4 @@ public class Endereco {
 		this.estado = estado;
 	}
 	
-		
 }

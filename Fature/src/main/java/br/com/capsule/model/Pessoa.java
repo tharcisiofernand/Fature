@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Pessoa {
 	
-	private Integer id;
+	private int id;
 	private String nome;
 	private String sexo;
 	private String cpf;
@@ -12,12 +12,12 @@ public class Pessoa {
 	private String mae;
 	private Date dtaNascimento;
 	private Endereco endereco;
-	private Fone fone;
+	private Telefone fone;
 	
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getNome() {
@@ -62,10 +62,10 @@ public class Pessoa {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
-	public Fone getFone() {
+	public Telefone getFone() {
 		return fone;
 	}
-	public void setFone(Fone fone) {
+	public void setFone(Telefone fone) {
 		this.fone = fone;
 	}
 }

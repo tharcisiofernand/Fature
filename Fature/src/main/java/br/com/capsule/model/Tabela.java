@@ -2,14 +2,16 @@ package br.com.capsule.model;
 
 public class Tabela {
 
-	private Integer id;
+	private int id;
 	private String nome;
 	private Integer codigo;
+	private Procedimentos procedimento;
+	private Double valor;
 	
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getNome() {
@@ -24,6 +26,17 @@ public class Tabela {
 	public void setCodigo(Integer codigo) {
 		this.codigo = codigo;
 	}
-	
+	public Procedimentos getProcedimento() {
+		return procedimento;
+	}
+	public void setProcedimento(Procedimentos procedimento) {
+		this.procedimento = procedimento;
+	}
+	public Double getValor() {
+		return valor;
+	}
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
 	
 }

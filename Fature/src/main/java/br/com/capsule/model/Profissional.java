@@ -2,15 +2,15 @@ package br.com.capsule.model;
 
 public class Profissional extends Pessoa{
 	
-	private Integer id;
+	private int id;
 	private String conselho;
 	private Especialiade especialidade;
 	private Cbo cbo;
 	
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getConselho() {

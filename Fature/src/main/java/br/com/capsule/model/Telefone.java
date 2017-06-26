@@ -1,14 +1,15 @@
 package br.com.capsule.model;
 
-public class Fone {
+public class Telefone {
 	
-	private Integer id;
+	private int id;
 	private Integer ddd;
 	private Integer numero;
-	public Integer getId() {
+	
+	public int getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public Integer getDdd() {

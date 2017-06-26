@@ -2,15 +2,15 @@ package br.com.capsule.model;
 
 public class Convenio {
 	
-	private Integer id;
+	private int id;
 	private String nome;
 	private Tabela tabela;
 	private Double percentual;
 	
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getNome() {
@@ -31,5 +31,5 @@ public class Convenio {
 	public void setPercentual(Double percentual) {
 		this.percentual = percentual;
 	}
-
+	
 }

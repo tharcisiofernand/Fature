@@ -2,14 +2,14 @@ package br.com.capsule.model;
 
 public class Paciente extends Pessoa{
 	
-	private Integer id;
+	private int id;
 	private Integer codigo;
 	private Convenio convenio;
 	
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public Integer getCodigo() {
@@ -25,5 +25,5 @@ public class Paciente extends Pessoa{
 		this.convenio = convenio;
 	}
 	
-
+	
 }

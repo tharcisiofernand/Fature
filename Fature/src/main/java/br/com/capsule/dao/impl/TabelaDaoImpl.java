@@ -1,11 +1,11 @@
-package br.com.capsule.controller.impl;
+package br.com.capsule.dao.impl;
 
 import java.util.List;
 
-import br.com.capsule.controller.TabelaCtrl;
+import br.com.capsule.dao.TabelaDao;
 import br.com.capsule.model.Tabela;
 
-public class TabelaCtrlImpl implements TabelaCtrl{
+public class TabelaDaoImpl implements TabelaDao{
 
 	public void cadastrar(Tabela tabela) {
 		// TODO Auto-generated method stub

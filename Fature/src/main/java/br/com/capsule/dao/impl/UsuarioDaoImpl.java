@@ -1,11 +1,11 @@
-package br.com.capsule.controller.impl;
+package br.com.capsule.dao.impl;
 
 import java.util.List;
 
-import br.com.capsule.controller.UsuarioCtrl;
+import br.com.capsule.dao.UsuarioDao;
 import br.com.capsule.model.Usuario;
 
-public class UsuarioCtrlImpl implements UsuarioCtrl{
+public class UsuarioDaoImpl implements UsuarioDao{
 
 	public void cadastrar(Usuario usuario) {
 		// TODO Auto-generated method stub

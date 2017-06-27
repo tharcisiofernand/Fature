@@ -1,11 +1,11 @@
-package br.com.capsule.controller.impl;
+package br.com.capsule.dao.impl;
 
 import java.util.List;
 
-import br.com.capsule.controller.PacienteCtrl;
+import br.com.capsule.dao.PacienteDao;
 import br.com.capsule.model.Paciente;
 
-public class PacienteCtrlImpl implements PacienteCtrl{
+public class PacienteDaoImpl implements PacienteDao{
 
 	public void cadastrar(Paciente paciente) {
 		// TODO Auto-generated method stub

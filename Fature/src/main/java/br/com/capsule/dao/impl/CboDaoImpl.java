@@ -1,13 +1,13 @@
-package br.com.capsule.controller.impl;
+package br.com.capsule.dao.impl;
 
 import java.util.List;
 
-import br.com.capsule.controller.CidCtrl;
-import br.com.capsule.model.Cid;
+import br.com.capsule.dao.CboDao;
+import br.com.capsule.model.Cbo;
 
-public class CidCtrlImpl implements CidCtrl{
+public class CboDaoImpl implements CboDao{
 
-	public void cadastrar(Cid cid) {
+	public void cadastrar(Cbo cbo) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -17,22 +17,22 @@ public class CidCtrlImpl implements CidCtrl{
 		
 	}
 
-	public void atualizar(Cid cid) {
+	public void atualizar(Cbo cbo) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public List<Cid> litarTodos() {
+	public List<Cbo> litarTodos() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public Cid listaPorId(int id) {
+	public Cbo listaPorId(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public Cid listaPorCodigo(String codigo) {
+	public Cbo listaPorCodigo(int codigo) {
 		// TODO Auto-generated method stub
 		return null;
 	}

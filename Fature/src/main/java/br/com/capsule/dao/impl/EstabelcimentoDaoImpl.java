@@ -1,11 +1,11 @@
-package br.com.capsule.controller.impl;
+package br.com.capsule.dao.impl;
 
 import java.util.List;
 
-import br.com.capsule.controller.EstabelecimentoCtrl;
+import br.com.capsule.dao.EstabelecimentoDao;
 import br.com.capsule.model.Estabelecimento;
 
-public class EstabelecimentoCtrlImpl implements EstabelecimentoCtrl{
+public class EstabelcimentoDaoImpl implements EstabelecimentoDao{
 
 	public void cadastrar(Estabelecimento estabelcimento) {
 		// TODO Auto-generated method stub
@@ -37,5 +37,4 @@ public class EstabelecimentoCtrlImpl implements EstabelecimentoCtrl{
 		return null;
 	}
 
-	
 }

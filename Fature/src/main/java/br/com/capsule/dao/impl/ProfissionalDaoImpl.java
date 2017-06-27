@@ -1,11 +1,11 @@
-package br.com.capsule.controller.impl;
+package br.com.capsule.dao.impl;
 
 import java.util.List;
 
-import br.com.capsule.controller.ProfissionalCtrl;
+import br.com.capsule.dao.ProfissionalDao;
 import br.com.capsule.model.Profissional;
 
-public class ProfissionalCtrlImpl implements ProfissionalCtrl{
+public class ProfissionalDaoImpl implements ProfissionalDao{
 
 	public void cadastrar(Profissional profissional) {
 		// TODO Auto-generated method stub

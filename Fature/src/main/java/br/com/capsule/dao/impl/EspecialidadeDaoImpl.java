@@ -1,11 +1,11 @@
-package br.com.capsule.controller.impl;
+package br.com.capsule.dao.impl;
 
 import java.util.List;
 
-import br.com.capsule.controller.EspecialidadeCtrl;
+import br.com.capsule.dao.EspecialidadeDao;
 import br.com.capsule.model.Especialidade;
 
-public class EspecialidadeCtrlImpl implements EspecialidadeCtrl{
+public class EspecialidadeDaoImpl implements EspecialidadeDao{
 
 	public void cadastrar(Especialidade especialidade) {
 		// TODO Auto-generated method stub

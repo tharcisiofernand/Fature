@@ -1,11 +1,11 @@
-package br.com.capsule.controller.impl;
+package br.com.capsule.dao.impl;
 
 import java.util.List;
 
-import br.com.capsule.controller.ConvenioCtrl;
+import br.com.capsule.dao.ConvenioDao;
 import br.com.capsule.model.Convenio;
 
-public class ConvenioCtrlImpl implements ConvenioCtrl{
+public class ConvenioDaoImpl implements ConvenioDao{
 
 	public void cadastrar(Convenio convenio) {
 		// TODO Auto-generated method stub

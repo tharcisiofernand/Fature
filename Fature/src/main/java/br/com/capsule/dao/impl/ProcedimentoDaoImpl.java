@@ -1,11 +1,11 @@
-package br.com.capsule.controller.impl;
+package br.com.capsule.dao.impl;
 
 import java.util.List;
 
-import br.com.capsule.controller.ProcedimentoCtrl;
+import br.com.capsule.dao.ProcedimentoDao;
 import br.com.capsule.model.Procedimentos;
 
-public class ProcedimentoCtrlImpl implements ProcedimentoCtrl{
+public class ProcedimentoDaoImpl implements ProcedimentoDao{
 
 	public void cadastrar(Procedimentos procedimento) {
 		// TODO Auto-generated method stub

@@ -1,11 +1,10 @@
 package br.com.capsule.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.PrimaryKeyJoinColumn;
 
 @Entity
+@PrimaryKeyJoinColumn(name="id")
 public class Profissional extends Pessoa{
 	
 	/**
@@ -13,19 +12,11 @@ public class Profissional extends Pessoa{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+
 	private String conselho;
 	private Especialidade especialidade;
 	private Cbo cbo;
 	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
 	public String getConselho() {
 		return conselho;
 	}

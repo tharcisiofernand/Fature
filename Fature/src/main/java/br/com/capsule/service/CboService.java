@@ -10,6 +10,5 @@ public interface CboService {
 	public void deletar (int id);
 	public List<Cbo> litarTodos();
 	public Cbo listaPorId(int id);
-	public Cbo listaPorCodigo(int codigo);
 
 }

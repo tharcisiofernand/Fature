@@ -7,7 +7,5 @@ import br.com.capsule.model.Convenio;
 
 @Repository
 public interface ConvenioDao extends CrudRepository<Convenio, Long>{
-	
-	public Convenio listaPorCodigo(int codigo);
 
 }

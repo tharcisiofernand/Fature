@@ -10,6 +10,5 @@ public interface CidService {
 	public void deletar (int id);
 	public List<Cid> litarTodos();
 	public Cid listaPorId(int id);
-	public Cid listaPorCodigo(String codigo);
 
 }

@@ -10,6 +10,5 @@ public interface EstabelecimentoService {
 	public void deletar (int id);
 	public List<Estabelecimento> litarTodos();
 	public Estabelecimento listaPorId(int id);
-	public Estabelecimento listaPorCnpj(Long cnpj);
 
 }

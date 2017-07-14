@@ -10,6 +10,5 @@ public interface ConvenioService {
 	public void deletar (int id);
 	public List<Convenio> litarTodos();
 	public Convenio listaPorId(int id);
-	public Convenio listaPorCodigo(int codigo);
 
 }

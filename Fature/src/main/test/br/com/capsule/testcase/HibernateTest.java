@@ -20,7 +20,7 @@ public class HibernateTest{
 			Session session = sessionFactory.openSession();
 			session.beginTransaction();
 
-			Cbo cbo = new Cbo("Medico Radiologista", 225320);
+			Cbo cbo = new Cbo();
 			session.save(cbo);
 			
 			

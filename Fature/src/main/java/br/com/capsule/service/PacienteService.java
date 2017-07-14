@@ -10,5 +10,5 @@ public interface PacienteService {
 	public void deletar (int id);
 	public List<Paciente> litarTodos();
 	public Paciente listaPorId(int id);
-	public Paciente listaPorCodigo(int codigo);
+
 }

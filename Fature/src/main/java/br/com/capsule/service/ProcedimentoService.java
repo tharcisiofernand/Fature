@@ -10,6 +10,5 @@ public interface ProcedimentoService {
 	public void deletar (int id);
 	public List<Procedimentos> litarTodos();
 	public Procedimentos listaPorId(int id);
-	public Procedimentos listaPorCodigo(String codigo);
 
 }

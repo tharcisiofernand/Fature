@@ -33,8 +33,4 @@ public class EspecialidadeServiceImpl implements EspecialidadeService{
 		return this.especialidadedao.findOne((long) id);
 	}
 
-	public Especialidade listaPorCodigo(int codigo) {
-		return this.especialidadedao.listaPorCodigo(codigo);
-	}
-
 }

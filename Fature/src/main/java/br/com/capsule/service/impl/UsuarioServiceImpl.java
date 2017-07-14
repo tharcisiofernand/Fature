@@ -33,8 +33,4 @@ public class UsuarioServiceImpl implements UsuarioService{
 		return this.usuariodao.findOne((long) id);
 	}
 
-	public Usuario listaPorCpf(Long cpf) {
-		return this.usuariodao.listaPorCpf(cpf);
-	}
-
 }

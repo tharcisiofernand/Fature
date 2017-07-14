@@ -8,6 +8,6 @@ import br.com.capsule.model.Cbo;
 @Repository
 public interface CboDao extends CrudRepository<Cbo, Long> {
 	
-	public Cbo listaPorCodigo(int codigo);
+	//public Cbo listaPorCodigo(int codigo);
 
 }

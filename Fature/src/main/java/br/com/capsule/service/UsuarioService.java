@@ -10,6 +10,5 @@ public interface UsuarioService {
 	public void deletar (int id);
 	public List<Usuario> litarTodos();
 	public Usuario listaPorId(int id);
-	public Usuario listaPorCpf(Long cpf);
 
 }

@@ -33,8 +33,4 @@ public class PacienteServiceImpl implements PacienteService{
 		return this.pacientedao.findOne((long) id);
 	}
 
-	public Paciente listaPorCodigo(int codigo) {
-		return this.pacientedao.listaPorCodigo(codigo);
-	}
-
 }

@@ -10,6 +10,5 @@ public interface EspecialidadeService {
 	public void deletar (int id);
 	public List<Especialidade> litarTodos();
 	public Especialidade listaPorId(int id);
-	public Especialidade listaPorCodigo(int codigo);
 
 }

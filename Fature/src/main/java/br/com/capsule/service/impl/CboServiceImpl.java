@@ -36,8 +36,4 @@ public class CboServiceImpl implements CboService{
 		return this.cbodao.findOne((long) id);
 	}
 
-	public Cbo listaPorCodigo(int codigo) {
-		return this.cbodao.listaPorCodigo(codigo);
-	}
-
 }

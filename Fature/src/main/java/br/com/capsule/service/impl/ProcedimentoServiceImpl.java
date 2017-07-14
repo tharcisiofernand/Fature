@@ -33,8 +33,4 @@ public class ProcedimentoServiceImpl implements ProcedimentoService{
 		return this.procedimentodao.findOne((long) id);
 	}
 
-	public Procedimentos listaPorCodigo(String codigo) {
-		return this.procedimentodao.listaPorCodigo(codigo);
-	}
-
 }

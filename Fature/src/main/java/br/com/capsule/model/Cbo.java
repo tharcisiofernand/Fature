@@ -17,12 +17,6 @@ public class Cbo implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public Cbo(String nome, int codigo) {
-		super();
-		this.nome = nome;
-		this.codigo = codigo;
-	}
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;

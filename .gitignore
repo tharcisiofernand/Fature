@@ -1,1 +1,11 @@
 /Servers/
+/RemoteSystemsTempFiles/
+/.recommenders/
+/.metadata/
+README.md
+/.git/
+/.settings/
+/target/
+/.settings/
+/.classpath
+//*.metadata*//

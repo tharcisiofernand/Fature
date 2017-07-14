@@ -10,6 +10,5 @@ public interface TabelaService {
 	public void deletar (int id);
 	public List<Tabela> litarTodos();
 	public Tabela listaPorId(int id);
-	public Tabela listaPorCodigo(Long codigo);
 
 }

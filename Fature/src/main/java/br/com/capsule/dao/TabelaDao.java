@@ -7,7 +7,5 @@ import br.com.capsule.model.Tabela;
 
 @Repository
 public interface TabelaDao extends CrudRepository<Tabela, Long>{
-	
-	public Tabela listaPorCodigo(Long codigo);
 
 }

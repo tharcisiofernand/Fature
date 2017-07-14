@@ -32,10 +32,5 @@ public class EstabelecimentoServiceImpl implements EstabelecimentoService{
 	public Estabelecimento listaPorId(int id) {
 		return this.estabelecimentodao.findOne((long) id);
 	}
-
-	public Estabelecimento listaPorCnpj(Long cnpj) {
-		return this.estabelecimentodao.listaPorCnpj(cnpj);
-	}
-
 	
 }

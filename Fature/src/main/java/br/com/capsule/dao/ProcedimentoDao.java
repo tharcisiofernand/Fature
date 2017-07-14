@@ -7,7 +7,5 @@ import br.com.capsule.model.Procedimentos;
 
 @Repository
 public interface ProcedimentoDao extends CrudRepository<Procedimentos, Long>{
-	
-	public Procedimentos listaPorCodigo(String codigo);
 
 }

@@ -10,6 +10,5 @@ public interface ProfissionalService {
 	public void deletar (int id);
 	public List<Profissional> litarTodos();
 	public Profissional listaPorId(int id);
-	public Profissional listaPorConselho(String conselho);
 
 }

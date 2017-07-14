@@ -33,8 +33,4 @@ public class ProfissionalServiceImpl implements ProfissionalService{
 		return this.profissionaldao.findOne((long) id);
 	}
 
-	public Profissional listaPorConselho(String conselho) {
-		return this.profissionaldao.listaPorConselho(conselho);
-	}
-
 }

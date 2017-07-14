@@ -33,8 +33,4 @@ public class ConvenioServiceImpl implements ConvenioService{
 		return this.conveniodao.findOne((long) id);
 	}
 
-	public Convenio listaPorCodigo(int codigo) {
-		return this.conveniodao.listaPorCodigo(codigo);
-	}
-
 }

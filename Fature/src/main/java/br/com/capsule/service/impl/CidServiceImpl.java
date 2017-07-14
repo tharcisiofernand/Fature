@@ -34,8 +34,4 @@ public class CidServiceImpl implements CidService{
 		return this.ciddao.findOne((long) id);
 	}
 
-	public Cid listaPorCodigo(String codigo) {
-		return this.ciddao.listaPorCodigo(codigo);
-	}
-
 }

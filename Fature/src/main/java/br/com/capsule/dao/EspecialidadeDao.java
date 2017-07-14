@@ -7,7 +7,5 @@ import br.com.capsule.model.Especialidade;
 
 @Repository
 public interface EspecialidadeDao extends CrudRepository<Especialidade, Long> {
-	
-	public Especialidade listaPorCodigo(int codigo);
 
 }

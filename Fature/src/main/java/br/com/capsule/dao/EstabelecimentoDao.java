@@ -7,7 +7,5 @@ import br.com.capsule.model.Estabelecimento;
 
 @Repository
 public interface EstabelecimentoDao extends CrudRepository<Estabelecimento, Long>{
-	
-	public Estabelecimento listaPorCnpj(Long cnpj);
 
 }

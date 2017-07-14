@@ -33,8 +33,4 @@ public class TabelaServiceImpl implements TabelaService{
 		return this.tabeladao.findOne((long) id);
 	}
 
-	public Tabela listaPorCodigo(Long codigo) {
-		return this.tabeladao.listaPorCodigo(codigo);
-	}
-
 }

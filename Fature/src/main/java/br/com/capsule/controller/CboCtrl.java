@@ -33,7 +33,7 @@ public class CboCtrl {
 			}
 		} catch (Exception e) {
 			LOGGER.info(e.getMessage());
-			return new ResponseEntity<Cbo>(HttpStatus.FORBIDDEN);
+			return new ResponseEntity<Cbo>(HttpStatus.UNAUTHORIZED);
 		} 
 		
 		return new ResponseEntity<Cbo>(HttpStatus.OK);

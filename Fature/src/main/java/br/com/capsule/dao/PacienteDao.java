@@ -1,15 +1,13 @@
 package br.com.capsule.dao;
 
-import java.util.List;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import br.com.capsule.model.Paciente;
 
-public interface PacienteDao {
-
-	public void cadastrar (Paciente paciente);
-	public void deletar (int id);
-	public void atualizar (Paciente paciente);
-	public List<Paciente> litarTodos();
-	public Paciente listaPorId(int id);
+@Repository
+public interface PacienteDao extends CrudRepository<Paciente, Long>{
+	
 	public Paciente listaPorCodigo(int codigo);
+
 }

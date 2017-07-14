@@ -2,39 +2,35 @@ package br.com.capsule.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import br.com.capsule.dao.EspecialidadeDao;
 import br.com.capsule.model.Especialidade;
 import br.com.capsule.service.EspecialidadeService;
 
-@Service
+@Service("EspecialidadeService")
+@Transactional
 public class EspecialidadeServiceImpl implements EspecialidadeService{
 	
+	@Autowired
 	private EspecialidadeDao especialidadedao;
 
-	public void setEspecialidadedao(EspecialidadeDao especialidadedao) {
-		this.especialidadedao = especialidadedao;
-	}
-
 	public void cadastrar(Especialidade especialidade) {
-		this.especialidadedao.cadastrar(especialidade);			
+		this.especialidadedao.save(especialidade);			
 	}
 
 	public void deletar(int id) {
-		this.especialidadedao.deletar(id);			
-	}
-
-	public void atualizar(Especialidade especialidade) {
-		this.especialidadedao.atualizar(especialidade);			
+		this.especialidadedao.delete((long) id);			
 	}
 
 	public List<Especialidade> litarTodos() {
-		return this.especialidadedao.litarTodos();
+		return (List<Especialidade>) this.especialidadedao.findAll();
 	}
 
 	public Especialidade listaPorId(int id) {
-		return this.especialidadedao.listaPorId(id);
+		return this.especialidadedao.findOne((long) id);
 	}
 
 	public Especialidade listaPorCodigo(int codigo) {

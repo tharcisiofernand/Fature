@@ -6,8 +6,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table
 public class Tabela implements Serializable{
 
 	/**
@@ -16,7 +18,7 @@ public class Tabela implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	
-	public Tabela(String nome, int codigo, Procedimentos procedimento, Double valor) {
+	public Tabela(String nome, Long codigo, Procedimentos procedimento, Double valor) {
 		super();
 		this.nome = nome;
 		this.codigo = codigo;
@@ -28,7 +30,7 @@ public class Tabela implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String nome;
-	private int codigo;
+	private Long codigo;
 	private Procedimentos procedimento;
 	private Double valor;
 	
@@ -44,10 +46,10 @@ public class Tabela implements Serializable{
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public int getCodigo() {
+	public Long getCodigo() {
 		return codigo;
 	}
-	public void setCodigo(int codigo) {
+	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
 	}
 	public Procedimentos getProcedimento() {

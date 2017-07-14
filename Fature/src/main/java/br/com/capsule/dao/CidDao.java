@@ -1,16 +1,13 @@
 package br.com.capsule.dao;
 
-import java.util.List;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import br.com.capsule.model.Cid;
 
-public interface CidDao {
+@Repository
+public interface CidDao extends CrudRepository<Cid, Long> {
 	
-	public void cadastrar (Cid cid);
-	public void deletar (int id);
-	public void atualizar (Cid cid);
-	public List<Cid> litarTodos();
-	public Cid listaPorId(int id);
 	public Cid listaPorCodigo(String codigo);
-
+	
 }

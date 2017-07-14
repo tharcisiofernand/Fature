@@ -1,16 +1,13 @@
 package br.com.capsule.dao;
 
-import java.util.List;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import br.com.capsule.model.Cbo;
 
-public interface CboDao {
+@Repository
+public interface CboDao extends CrudRepository<Cbo, Long> {
 	
-	public void cadastrar (Cbo cbo);
-	public void deletar (int id);
-	public void atualizar (Cbo cbo);
-	public List<Cbo> litarTodos();
-	public Cbo listaPorId(int id);
 	public Cbo listaPorCodigo(int codigo);
 
 }

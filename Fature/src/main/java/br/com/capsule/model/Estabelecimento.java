@@ -6,8 +6,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table
 public class Estabelecimento implements Serializable{
 	
 	/**
@@ -16,7 +18,7 @@ public class Estabelecimento implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	
-	public Estabelecimento(String nome, Endereco endereco, Telefone fone, int cnpj, int cnes) {
+	public Estabelecimento(String nome, Endereco endereco, Telefone fone, Long cnpj, int cnes) {
 		super();
 		this.nome = nome;
 		this.endereco = endereco;
@@ -31,7 +33,7 @@ public class Estabelecimento implements Serializable{
 	private String nome;
 	private Endereco endereco;
 	private Telefone fone;
-	private int cnpj;
+	private Long cnpj;
 	private int cnes;
 	
 	public int getId() {
@@ -58,10 +60,10 @@ public class Estabelecimento implements Serializable{
 	public void setFone(Telefone fone) {
 		this.fone = fone;
 	}
-	public int getCnpj() {
+	public Long getCnpj() {
 		return cnpj;
 	}
-	public void setCnpj(int cnpj) {
+	public void setCnpj(Long cnpj) {
 		this.cnpj = cnpj;
 	}
 	public int getCnes() {

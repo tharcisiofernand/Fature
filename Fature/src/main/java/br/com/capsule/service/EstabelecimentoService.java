@@ -8,9 +8,8 @@ public interface EstabelecimentoService {
 	
 	public void cadastrar (Estabelecimento estabelcimento);
 	public void deletar (int id);
-	public void atualizar (Estabelecimento estabelecimento);
 	public List<Estabelecimento> litarTodos();
 	public Estabelecimento listaPorId(int id);
-	public Estabelecimento listaPorCnpj(int cnpj);
+	public Estabelecimento listaPorCnpj(Long cnpj);
 
 }

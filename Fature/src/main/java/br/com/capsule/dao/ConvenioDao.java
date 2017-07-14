@@ -1,16 +1,13 @@
 package br.com.capsule.dao;
 
-import java.util.List;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import br.com.capsule.model.Convenio;
 
-public interface ConvenioDao {
+@Repository
+public interface ConvenioDao extends CrudRepository<Convenio, Long>{
 	
-	public void cadastrar (Convenio convenio);
-	public void deletar (int id);
-	public void atualizar (Convenio convenio);
-	public List<Convenio> litarTodos();
-	public Convenio listaPorId(int id);
 	public Convenio listaPorCodigo(int codigo);
 
 }

@@ -8,9 +8,8 @@ public interface TabelaService {
 	
 	public void cadastrar (Tabela tabela);
 	public void deletar (int id);
-	public void atualizar (Tabela tabela);
 	public List<Tabela> litarTodos();
 	public Tabela listaPorId(int id);
-	public Tabela listaPorCodigo(int codigo);
+	public Tabela listaPorCodigo(Long codigo);
 
 }

@@ -2,39 +2,35 @@ package br.com.capsule.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import br.com.capsule.dao.PacienteDao;
 import br.com.capsule.model.Paciente;
 import br.com.capsule.service.PacienteService;
 
-@Service
+@Service("PacienteService")
+@Transactional
 public class PacienteServiceImpl implements PacienteService{
 	
+	@Autowired
 	private PacienteDao pacientedao;
 
-	public void setPacientedao(PacienteDao pacientedao) {
-		this.pacientedao = pacientedao;
-	}
-
 	public void cadastrar(Paciente paciente) {
-		this.pacientedao.cadastrar(paciente);					
+		this.pacientedao.save(paciente);					
 	}
 
 	public void deletar(int id) {
-		this.pacientedao.deletar(id);			
-	}
-
-	public void atualizar(Paciente paciente) {
-		this.pacientedao.atualizar(paciente);			
+		this.pacientedao.delete((long) id);			
 	}
 
 	public List<Paciente> litarTodos() {
-		return this.pacientedao.litarTodos();
+		return (List<Paciente>) this.pacientedao.findAll();
 	}
 
 	public Paciente listaPorId(int id) {
-		return this.pacientedao.listaPorId(id);
+		return this.pacientedao.findOne((long) id);
 	}
 
 	public Paciente listaPorCodigo(int codigo) {

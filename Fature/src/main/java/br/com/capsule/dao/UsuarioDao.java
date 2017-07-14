@@ -1,16 +1,13 @@
 package br.com.capsule.dao;
 
-import java.util.List;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import br.com.capsule.model.Usuario;
 
-public interface UsuarioDao {
+@Repository
+public interface UsuarioDao extends CrudRepository<Usuario, Long>{
 	
-	public void cadastrar (Usuario usuario);
-	public void deletar (int id);
-	public void atualizar (Usuario usuario);
-	public List<Usuario> litarTodos();
-	public Usuario listaPorId(int id);
-	public Usuario listaPorCpf(int cpf);
+	public Usuario listaPorCpf(Long cpf);
 
 }

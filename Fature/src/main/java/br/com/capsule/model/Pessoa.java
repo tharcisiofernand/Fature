@@ -9,8 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.Table;
 
 @Entity
+@Table
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Pessoa implements Serializable{
 	
@@ -24,7 +26,7 @@ public class Pessoa implements Serializable{
 	private int id;
 	private String nome;
 	private String sexo;
-	private int cpf;
+	private Long cpf;
 	private String pai;
 	private String mae;
 	private Date dtaNascimento;
@@ -49,10 +51,10 @@ public class Pessoa implements Serializable{
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-	public int getCpf() {
+	public Long getCpf() {
 		return cpf;
 	}
-	public void setCpf(int cpf) {
+	public void setCpf(Long cpf) {
 		this.cpf = cpf;
 	}
 	public String getPai() {

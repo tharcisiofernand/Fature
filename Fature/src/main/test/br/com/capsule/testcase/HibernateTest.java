@@ -27,7 +27,7 @@ public class HibernateTest{
 			Paciente paciente = new Paciente();
 			paciente.setCodigo(123);
 			paciente.setConvenio(null);
-			paciente.setCpf(72355);
+			paciente.setCpf((long) 72355);
 			paciente.setDtaNascimento(new Date());
 			paciente.setEndereco(null);
 			paciente.setFone(null);

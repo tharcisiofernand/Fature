@@ -1,16 +1,13 @@
 package br.com.capsule.dao;
 
-import java.util.List;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import br.com.capsule.model.Estabelecimento;
 
-public interface EstabelecimentoDao {
+@Repository
+public interface EstabelecimentoDao extends CrudRepository<Estabelecimento, Long>{
 	
-	public void cadastrar (Estabelecimento estabelcimento);
-	public void deletar (int id);
-	public void atualizar (Estabelecimento estabelecimento);
-	public List<Estabelecimento> litarTodos();
-	public Estabelecimento listaPorId(int id);
-	public Estabelecimento listaPorCnpj(int cnpj);
+	public Estabelecimento listaPorCnpj(Long cnpj);
 
 }

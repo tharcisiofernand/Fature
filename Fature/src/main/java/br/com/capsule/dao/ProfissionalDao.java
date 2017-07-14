@@ -1,16 +1,13 @@
 package br.com.capsule.dao;
 
-import java.util.List;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import br.com.capsule.model.Profissional;
 
-public interface ProfissionalDao {
+@Repository
+public interface ProfissionalDao extends CrudRepository<Profissional, Long>{
 	
-	public void cadastrar (Profissional profissional);
-	public void deletar (int id);
-	public void atualizar (Profissional profissional);
-	public List<Profissional> litarTodos();
-	public Profissional listaPorId(int id);
 	public Profissional listaPorConselho(String conselho);
 
 }

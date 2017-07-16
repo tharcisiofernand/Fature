@@ -17,21 +17,9 @@ public class Endereco implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	
-	public Endereco(String rua, String quadra, String lote, String bairro, String cep, String cidade, String estado) {
-		super();
-		this.rua = rua;
-		this.quadra = quadra;
-		this.lote = lote;
-		this.bairro = bairro;
-		this.cep = cep;
-		this.cidade = cidade;
-		this.estado = estado;
-	}
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	private String rua;
 	private String quadra;
 	private String lote;
@@ -40,10 +28,10 @@ public class Endereco implements Serializable{
 	private String cidade;
 	private String estado;
 	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getRua() {

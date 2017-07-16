@@ -7,8 +7,9 @@ import br.com.capsule.model.Procedimentos;
 public interface ProcedimentoService {
 	
 	public void cadastrar (Procedimentos procedimento);
-	public void deletar (int id);
+	public void deletar (Long id);
 	public List<Procedimentos> litarTodos();
-	public Procedimentos listaPorId(int id);
+	public Procedimentos listaPorId(Long id);
+	public String listaPorCodigo(Long codigo);
 
 }

@@ -7,8 +7,9 @@ import br.com.capsule.model.Tabela;
 public interface TabelaService {
 	
 	public void cadastrar (Tabela tabela);
-	public void deletar (int id);
+	public void deletar (Long id);
 	public List<Tabela> litarTodos();
-	public Tabela listaPorId(int id);
+	public Tabela listaPorId(Long id);
+	public String listaPorCodigo(Long codigo);
 
 }

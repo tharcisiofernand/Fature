@@ -1,6 +1,7 @@
 package br.com.capsule.model;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
@@ -14,13 +15,14 @@ public class Paciente extends Pessoa{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private int codigo;
+	private Long codigo;
+	@OneToMany
 	private Convenio convenio;
 	
-	public int getCodigo() {
+	public Long getCodigo() {
 		return codigo;
 	}
-	public void setCodigo(int codigo) {
+	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
 	}
 	public Convenio getConvenio() {

@@ -17,23 +17,16 @@ public class Especialidade implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	
-	public Especialidade(String nome, int codigo) {
-		super();
-		this.nome = nome;
-		this.codigo = codigo;
-	}
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	private String nome;
-	private int codigo;
+	private Long codigo;
 	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNome() {
@@ -42,10 +35,10 @@ public class Especialidade implements Serializable{
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public int getCodigo() {
+	public Long getCodigo() {
 		return codigo;
 	}
-	public void setCodigo(int codigo) {
+	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
 	}
 

@@ -8,4 +8,6 @@ import br.com.capsule.model.Cid;
 @Repository
 public interface CidDao extends CrudRepository<Cid, Long> {
 	
+	public Cid findByCodigo(String codigo);
+	
 }

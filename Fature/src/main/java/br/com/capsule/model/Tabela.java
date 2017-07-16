@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -17,27 +18,19 @@ public class Tabela implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	
-	public Tabela(String nome, Long codigo, Procedimentos procedimento, Double valor) {
-		super();
-		this.nome = nome;
-		this.codigo = codigo;
-		this.procedimento = procedimento;
-		this.valor = valor;
-	}
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	private String nome;
 	private Long codigo;
+	@OneToOne
 	private Procedimentos procedimento;
 	private Double valor;
 	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNome() {

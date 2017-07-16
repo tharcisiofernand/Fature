@@ -7,8 +7,10 @@ import br.com.capsule.model.Estabelecimento;
 public interface EstabelecimentoService {
 	
 	public void cadastrar (Estabelecimento estabelcimento);
-	public void deletar (int id);
+	public void deletar (Long id);
 	public List<Estabelecimento> litarTodos();
-	public Estabelecimento listaPorId(int id);
+	public Estabelecimento listaPorId(Long id);
+	public String listaPorCnpj(Long cnpj);
+	public String listaPorCnes(Long cnes);
 
 }

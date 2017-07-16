@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -19,16 +20,17 @@ public class Convenio implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	private String nome;
+	@OneToOne
 	private Tabela tabela;
 	private Double percentual;
-	private int codigo;
+	private Long codigo;
 	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNome() {
@@ -49,10 +51,10 @@ public class Convenio implements Serializable{
 	public void setPercentual(Double percentual) {
 		this.percentual = percentual;
 	}
-	public int getCodigo() {
+	public Long getCodigo() {
 		return codigo;
 	}
-	public void setCodigo(int codigo) {
+	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
 	}
 	

@@ -7,8 +7,9 @@ import br.com.capsule.model.Convenio;
 public interface ConvenioService {
 	
 	public void cadastrar (Convenio convenio);
-	public void deletar (int id);
+	public void deletar (Long id);
 	public List<Convenio> litarTodos();
-	public Convenio listaPorId(int id);
+	public Convenio listaPorId(Long id);
+	public String listaPorCodigo(Long codigo);
 
 }

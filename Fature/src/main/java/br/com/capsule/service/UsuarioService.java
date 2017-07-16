@@ -7,8 +7,9 @@ import br.com.capsule.model.Usuario;
 public interface UsuarioService {
 	
 	public void cadastrar (Usuario usuario);
-	public void deletar (int id);
+	public void deletar (Long id);
 	public List<Usuario> litarTodos();
-	public Usuario listaPorId(int id);
+	public Usuario listaPorId(Long id);
+	public String listaPorCpf(Long cpf);
 
 }

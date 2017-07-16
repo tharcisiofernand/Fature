@@ -7,5 +7,9 @@ import br.com.capsule.model.Paciente;
 
 @Repository
 public interface PacienteDao extends CrudRepository<Paciente, Long>{
+	
+	public Paciente findByCodigo(Long codigo);
+	
+	public Paciente findByCpf(Long cpf);
 
 }

@@ -7,5 +7,7 @@ import br.com.capsule.model.Profissional;
 
 @Repository
 public interface ProfissionalDao extends CrudRepository<Profissional, Long>{
+	
+	public Profissional findByConselho(Long conselho);
 
 }

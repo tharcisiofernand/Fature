@@ -17,23 +17,16 @@ public class Procedimentos implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	
-	public Procedimentos(String descricao, int codigo) {
-		super();
-		this.descricao = descricao;
-		this.codigo = codigo;
-	}
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	private String descricao;
-	private int codigo;
+	private Long codigo;
 	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getDescricao() {
@@ -42,10 +35,10 @@ public class Procedimentos implements Serializable{
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public int getCodigo() {
+	public Long getCodigo() {
 		return codigo;
 	}
-	public void setCodigo(int codigo) {
+	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
 	}
 	

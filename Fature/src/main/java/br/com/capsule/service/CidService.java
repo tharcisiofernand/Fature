@@ -7,8 +7,9 @@ import br.com.capsule.model.Cid;
 public interface CidService {
 	
 	public void cadastrar (Cid cid);
-	public void deletar (int id);
+	public void deletar (Long id);
 	public List<Cid> litarTodos();
-	public Cid listaPorId(int id);
+	public String listaPorCodigo(String codigo);
+	public Cid listaPorId(Long id);
 
 }

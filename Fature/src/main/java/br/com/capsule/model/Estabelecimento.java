@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -17,29 +18,21 @@ public class Estabelecimento implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	
-	public Estabelecimento(String nome, Endereco endereco, Telefone fone, Long cnpj, int cnes) {
-		super();
-		this.nome = nome;
-		this.endereco = endereco;
-		this.fone = fone;
-		this.cnpj = cnpj;
-		this.cnes = cnes;
-	}
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	private String nome;
+	@OneToMany
 	private Endereco endereco;
+	@OneToMany
 	private Telefone fone;
 	private Long cnpj;
-	private int cnes;
+	private Long cnes;
 	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNome() {
@@ -66,10 +59,10 @@ public class Estabelecimento implements Serializable{
 	public void setCnpj(Long cnpj) {
 		this.cnpj = cnpj;
 	}
-	public int getCnes() {
+	public Long getCnes() {
 		return cnes;
 	}
-	public void setCnes(int cnes) {
+	public void setCnes(Long cnes) {
 		this.cnes = cnes;
 	}
 

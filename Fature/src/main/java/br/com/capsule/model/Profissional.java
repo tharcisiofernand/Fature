@@ -1,6 +1,7 @@
 package br.com.capsule.model;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
@@ -15,14 +16,16 @@ public class Profissional extends Pessoa{
 	private static final long serialVersionUID = 1L;
 	
 
-	private String conselho;
+	private Long conselho;
+	@OneToMany
 	private Especialidade especialidade;
+	@OneToMany
 	private Cbo cbo;
 	
-	public String getConselho() {
+	public Long getConselho() {
 		return conselho;
 	}
-	public void setConselho(String conselho) {
+	public void setConselho(Long conselho) {
 		this.conselho = conselho;
 	}
 	public Especialidade getEspecialidade() {

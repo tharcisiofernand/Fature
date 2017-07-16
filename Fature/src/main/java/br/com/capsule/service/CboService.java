@@ -7,8 +7,9 @@ import br.com.capsule.model.Cbo;
 public interface CboService {
 	
 	public void cadastrar (Cbo cbo);
-	public void deletar (int id);
+	public void deletar (Long id);
 	public List<Cbo> litarTodos();
-	public Cbo listaPorId(int id);
+	public String listaPorCodigo(Long codigo);
+	public Cbo listaPorId(Long id);
 
 }
